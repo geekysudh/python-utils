@@ -5,7 +5,7 @@ print("Hello")
 def main():
     data = []
     obj = {
-        'name': 'Sudheesh',
+        'name': 'Sam',
         'age' : 20,
         'address':{
             'line1':'121212',
@@ -15,7 +15,7 @@ def main():
     }
     data.append(obj)
     data.append({
-        'name': 'Sudheesh1',
+        'name': 'Sam1',
         'age' : 20,
         'address':{
             'line1':'121212',
@@ -24,7 +24,7 @@ def main():
         }
     })
     data.append({
-        'name': 'Sudheesh1',
+        'name': 'Sam1',
         'age' : 12,
         'address':{
             'line1':'121212',
@@ -35,14 +35,19 @@ def main():
     })
     criteria0 = {
         'age' : 20,
+        'address':{
+            'pin_code':12345,
+        }
     }
-    obj_selector.select(data, criteria0);  
+    lst2  = obj_selector.select(data, criteria0);  
+    print(lst2)
     criteria1 = {
         'address':{
             'pin_code':12.34,
         }
     }
-    print(obj_selector.select(data, criteria1));  
+    lst3 =  obj_selector.select(data, criteria1)
+    print(lst3)
     
 # Using the special variable 
 # __name__
